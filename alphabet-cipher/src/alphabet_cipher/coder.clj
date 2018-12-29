@@ -86,7 +86,6 @@
           (recur (inc i) (inc j))
           )))
 )(def dddd dr)dddd
-;    (def ^:dynamic x dr)
 
     )
           
