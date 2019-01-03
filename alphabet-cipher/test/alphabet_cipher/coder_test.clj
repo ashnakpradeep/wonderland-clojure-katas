@@ -24,14 +24,11 @@
 
 (deftest test-decipher
   (testing "can extract the secret keyword given an encrypted message and the original message"
-;    (def v "vigilance") 
-;    (println v)
-;      (def r "")
-;      (println (decipher "opkyfipmfmwcvqoklyhxywgeecpvhelzg" "thequickbrownfoxjumpsoveralazydog"))
-;      (println r)
-;    (is (= v r))))
-    (is (= "scones"
-           (decipher "hcqxqqtqljmlzhwiivgbsapaiwcenmyu" "packmyboxwithfivedozenliquorjugs")))
+    (is(= "vigilance"
+       (decipher "opkyfipmfmwcvqoklyhxywgeecpvhelzg" "thequickbrownfoxjumpsoveralazydog")))
+     
+;    (is (= "scones"
+;           (decipher "hcqxqqtqljmlzhwiivgbsapaiwcenmyu" "packmyboxwithfivedozenliquorjugs")))
     (is (= (str "abcabcx")
            (str (decipher "hfnlphoontutufa" "hellofromrussia"))))))
 

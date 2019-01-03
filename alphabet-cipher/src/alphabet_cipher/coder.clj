@@ -5,10 +5,10 @@
 :let [y (char x)]
 :when (> x 0)]
 (hash-map (keyword(str y)) (- x 96)) )))
-
+(def abc "abcdefghijklmnopqrstuvwxyz")
 (defn encode [keyword1 message] 
  
-(def abc "abcdefghijklmnopqrstuvwxyz")
+
   
   (def rf "")
   
