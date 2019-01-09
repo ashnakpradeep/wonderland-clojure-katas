@@ -17,5 +17,5 @@
            (doublets "wheat" "bread"))))
 
   (testing "with no word links found"
-    (is (= []
+    (is (= nil
            (doublets "ye" "freezer")))))
