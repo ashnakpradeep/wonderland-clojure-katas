@@ -5,6 +5,7 @@
 (defn sum-rows [m]
   (map #(reduce + %) m))
 
+
 (defn sum-cols [m]
   [(reduce + (map first m))
    (reduce + (map second m))
@@ -16,11 +17,14 @@
 
 (deftest test-magic-square
   (testing "all the rows, columns, and diagonal add to the same number"
-    (is (= (set (sum-rows (magic-square values)))
+    (is (=(set (sum-rows (magic-square values)))
            (set (sum-cols (magic-square values)))
-           (set (sum-diagonals (magic-square values)))))
+           (set (sum-diagonals (magic-square values)))
+           )
+        )
 
     (is (= 1
            (count (set (sum-rows (magic-square values))))
            (count (set (sum-cols (magic-square values))))
-           (count (set (sum-diagonals (magic-square values))))))))
+           (count (set (sum-diagonals (magic-square values))))))
+    ))
