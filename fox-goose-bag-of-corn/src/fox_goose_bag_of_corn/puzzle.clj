@@ -68,8 +68,8 @@
         
          (recur (conj out move) forward)
          )
-       )))
-
+       ))
+)
 (defn river-crossing-plan[]
   (let [last-item #(map set (last %))]
     (crossing last-item)))
